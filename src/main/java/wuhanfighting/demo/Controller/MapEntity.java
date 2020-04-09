@@ -2,6 +2,8 @@ package wuhanfighting.demo.Controller;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class MapEntity {
     String name;
@@ -11,4 +13,5 @@ public class MapEntity {
     Integer col;
     Integer status;
     Integer index;
+    Date time;
 }

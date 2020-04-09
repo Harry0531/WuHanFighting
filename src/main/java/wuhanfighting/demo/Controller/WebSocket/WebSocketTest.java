@@ -86,7 +86,7 @@ public class WebSocketTest {
         now.setSchool((String) nowJson.get("school"));
 
         mapService.updateStatus(now);
-        System.out.println(now.getName()+"点亮了第"+now.getLine()+"行第"+now.getCol()+"列的图片\n"+now.getComment());
+        System.out.println(now.getName()+"点亮了第"+now.getIndex()+"个图片\n"+now.getComment());
         List<MapEntity> mapEntityList = mapService.getMapStatus();
         StringBuffer tmp = new StringBuffer(JSON.toJSONString(mapEntityList));
 

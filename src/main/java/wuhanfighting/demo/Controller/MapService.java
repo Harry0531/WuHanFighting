@@ -2,6 +2,7 @@ package wuhanfighting.demo.Controller;
 import java.io.IOException;
 import java.nio.file.WatchEvent;
 import java.util.Collections;
+import java.util.Date;
 import  java.util.List;
 import java.util.Map;
 
@@ -24,10 +25,12 @@ public class MapService {
     }
 
     public void updateStatus(MapEntity mapEntity){
+        mapEntity.setTime(new Date());
         mapDao.updateStatus(mapEntity);
     }
-    public  void reset(){
+    public  void reset() throws IOException {
         mapDao.reset();
+        webSocketTest.lightAllTest();
     }
     public  void lightAll(){
         List<MapEntity> mapEntities = mapDao.getMapStatus();
@@ -38,11 +41,12 @@ public class MapService {
                 map.setName("测试人"+mapEntities.indexOf(map));
                 map.setSchool("测试学校"+mapEntities.indexOf(map));
                 map.setComment("测试评论"+mapEntities.indexOf(map));
+                map.setTime(new Date());
                 mapDao.updateStatus(map);
             }
             try {
                 webSocketTest.lightAllTest();
-                Thread.sleep(3000);
+                Thread.sleep(2000);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

@@ -9,22 +9,23 @@
         <result column="status" property="status"/>
         <result column="index" property="index"/>
         <result column="school" property="school"/>
+        <result column="time" property="time"/>
     </resultMap>
 
     <select id="getMapStatus" resultMap="mapBean">
-        select `name`,`comment`,`line`,`col`,`status`,`index`,`school`
+        select `name`,`comment`,`line`,`col`,`status`,`index`,`school`,`time`
         from map_all
-        order by `index` ASC
+        order by `time` ASC
     </select>
 
     <update id="updateStatus">
         update map_all
-        set `name`=#{name},`comment`=#{comment},status=#{status},school=#{school}
+        set `name`=#{name},`comment`=#{comment},status=#{status},school=#{school},`time`=#{time}
         where `index`=#{index}
     </update>
 
     <update id="reset">
         update map_all
-        set `name` = "",`comment`="",`status`=0,school=""
+        set `name` = "",`comment`="",`status`=0,school="",`time`=null
     </update>
 </mapper>
