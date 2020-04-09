@@ -13,7 +13,7 @@
 
     <select id="getMapStatus" resultMap="mapBean">
         select
-      `name`,`comment`,`line`,`col`,`status`,`index`
+      `name`,`comment`,`line`,`col`,`status`,`index`,`school`
       from map_all
       order by `index` ASC
     </select>
