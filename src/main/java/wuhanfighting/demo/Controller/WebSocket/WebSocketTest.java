@@ -49,6 +49,13 @@ public class WebSocketTest {
         webSocketSet.add(this);     //加入set中
         addOnlineCount();           //在线数加1
         System.out.println("有新连接加入！当前在线人数为" + getOnlineCount());
+        List<MapEntity> mapEntityList = mapService.getMapStatus();
+        StringBuffer tmp = new StringBuffer(JSON.toJSONString(mapEntityList));
+        try {
+            this.sendMessage(tmp.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -112,6 +119,23 @@ public class WebSocketTest {
     public void sendMessage(String message) throws IOException{
         this.session.getBasicRemote().sendText(message);
         //this.session.getAsyncRemote().sendText(message);
+    }
+    /**
+     * 向所有用户发送消息
+     * @param
+     * @throws IOException
+     */
+    public void lightAllTest() throws IOException{
+        List<MapEntity> mapEntityList = mapService.getMapStatus();
+        StringBuffer tmp = new StringBuffer(JSON.toJSONString(mapEntityList));
+        for(WebSocketTest item: webSocketSet){
+            try {
+                item.session.getBasicRemote().sendText(tmp.toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+                continue;
+            }
+        }
     }
 
     public static synchronized int getOnlineCount() {

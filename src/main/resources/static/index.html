@@ -8,6 +8,10 @@
     <script src="./utils/elementui/index.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./utils/elementui/index.css">
     <style>
+        body{
+            height: 100vh;
+
+        }
         *{
             margin: 0;
             padding: 0;
@@ -21,73 +25,138 @@
             filter: grayscale(100%);
         }
 
-        .fillImage:hover {
+        .fillImage_Color {
             transition: filter 3s;
-            -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
-            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */ !important;
+            filter: grayscale(0%); !important;
+            cursor: default !important;
+        }
+
+        .word{
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;
+        }
+        .word span{
+            color: white;
+            font-size: 10vh;
+            font-family: 华文楷体;
+            font-weight: 900;
+            text-shadow: 0 0 2px black;
+        }
+        .word img{
+            width: 10%;
+        }
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            opacity: 0;
         }
     </style>
 </head>
 <body>
-<div id="app" style="width: 100%;height: 1080px;">
-    <div style="width:100%;height:270px">
-        <div style="width: 25%;height:100%;float: left">
-           <img src="./img/202038225334643VCG211183156413 (1)_1.jpg" class="fillImage" @click="openImg(1)">
+<div id="app" style="width: 100%;height: 100vh;  overflow: hidden;">
+    <div style="position: absolute;width: 100%;height: 100%">
+    <div style="width:100%;height:25%">
+        <div style="width: 20%;height:100%;float: left">
+           <img id="1" src="./img/20203912532397VCG211183156413 (3)_1.jpg" class="fillImage" @click="openImg($event)">
         </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_2.jpg" class="fillImage">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="2" src="./img/20203912532397VCG211183156413 (3)_2.jpg" class="fillImage" @click="openImg($event)">
         </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_3.jpg" class="fillImage">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="3" src="./img/20203912532397VCG211183156413 (3)_3.jpg" class="fillImage" @click="openImg($event)">
         </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_4.jpg" class="fillImage">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="4" src="./img/20203912532397VCG211183156413 (3)_4.jpg" class="fillImage" @click="openImg($event)">
         </div>
-    </div>
-    <div style="width:100%;height:270px">
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_5.jpg" class="fillImage">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="5" src="./img/20203912532397VCG211183156413 (3)_5.jpg" class="fillImage" @click="openImg($event)">
         </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_6.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_7.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_8.jpg" class="fillImage">
-        </div>
-    </div>
-    <div style="width:100%;height:270px">
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_9.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_10.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_11.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_12.jpg" class="fillImage">
-        </div>
-    </div>
-    <div style="width:100%;height:270px">
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_13.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_14.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_15.jpg" class="fillImage">
-        </div>
-        <div style="width: 25%;height:100%;float: left">
-            <img src="./img/202038225334643VCG211183156413 (1)_16.jpg" class="fillImage">
-        </div>
-    </div>
 
 
+    </div>
+    <div style="width:100%;height:25%">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="6" src="./img/20203912532397VCG211183156413 (3)_6.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="7" src="./img/20203912532397VCG211183156413 (3)_7.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="8" src="./img/20203912532397VCG211183156413 (3)_8.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="9"  src="./img/20203912532397VCG211183156413 (3)_9.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="10" src="./img/20203912532397VCG211183156413 (3)_10.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+
+    </div>
+    <div style="width:100%;height:25%">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="11"  src="./img/20203912532397VCG211183156413 (3)_11.jpg" class="fillImage"  @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="12"  src="./img/20203912532397VCG211183156413 (3)_12.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="13" src="./img/20203912532397VCG211183156413 (3)_13.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="14"  src="./img/20203912532397VCG211183156413 (3)_14.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="15"  src="./img/20203912532397VCG211183156413 (3)_15.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+
+    </div>
+    <div style="width:100%;height:25%">
+        <div style="width: 20%;height:100%;float: left">
+            <img id="16"  src="./img/20203912532397VCG211183156413 (3)_16.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="17"  src="./img/20203912532397VCG211183156413 (3)_17.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="18"  src="./img/20203912532397VCG211183156413 (3)_18.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="19"  src="./img/20203912532397VCG211183156413 (3)_19.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+        <div style="width: 20%;height:100%;float: left">
+            <img id="20"  src="./img/20203912532397VCG211183156413 (3)_20.jpg" class="fillImage" @click="openImg($event)">
+        </div>
+    </div>
+    </div>
+    <div style="position: absolute;width: 100%;height: 100%">
+        <div style=" margin-top: 7%"  class="word">
+            <transition name="fade">
+                <img style="margin-right: 7%;"src="./img/Bit.png">
+                <img style="margin-left: 5%;"src="./img/hua.png">
+            </transition>
+        </div>
+        <div class="word">
+            <transition name="fade">
+                <span>北理工，华师一！</span>
+            </transition>
+        </div>
+        <div class="word">
+            <transition name="fade">
+                <span>携手抗疫，并肩同行！</span>
+            </transition>
+        </div>
+        <div class="word">
+            <transition name="fade">
+                <span>武汉加油！中国加油！</span>
+            </transition>
+        </div>
+
+    </div>
 
 </div>
 </body>
@@ -109,13 +178,18 @@
 
     //连接成功建立的回调方法
     websocket.onopen = function () {
-        setMessageInnerHTML("WebSocket连接成功");
+        console.log("连接建立成功");
     }
 
     //接收到消息的回调方法
     websocket.onmessage = function (event) {
+        console.log("收到消息");
         var data = JSON.parse(event.data);
-        setMessageInnerHTML(event.data);
+        data.forEach(function (img) {
+            if(img["status"] === 1){//被点亮的图片
+                imgLight(img["index"]);
+            }
+        })
     }
 
     //连接关闭的回调方法
@@ -128,10 +202,6 @@
         closeWebSocket();
     }
 
-    //将消息显示在网页上
-    function setMessageInnerHTML(innerHTML) {
-
-    }
 
     //关闭WebSocket连接
     function closeWebSocket() {
@@ -154,20 +224,44 @@
         websocket.send(message);
     }
 
+    function imgLight(index){
+        var classVal = document.getElementById(index).getAttribute("class");
+        classVal = classVal.concat(" fillImage_Color");
+        document.getElementById(index).setAttribute("class",classVal );
+    }
+
     var app = new Vue({
         el: '#app',
         data:{
             fill:'cover'
+
         },
         methods:{
-            openImg:function (index) {
-                console.log(index);
+            openImg:function (event) {
+                console.log(event.target);
+                imgLight(event.target.id);
             }
         },
         mounted: function () {
-
+            //autodivheight();
         }
     })
+
+    function autodivheight(){ //函数：获取尺寸
+        //获取浏览器窗口高度
+        var winHeight=0;
+        if (window.innerHeight)
+            winHeight = window.innerHeight;
+        else if ((document.body) && (document.body.clientHeight))
+            winHeight = document.body.clientHeight;
+        //通过深入Document内部对body进行检测，获取浏览器窗口高度
+        if (document.documentElement && document.documentElement.clientHeight)
+            winHeight = document.documentElement.clientHeight;
+        //DIV高度为浏览器窗口的高度
+        document.getElementById("app").style.height= winHeight +"px";
+
+    }
+    window.onresize=autodivheight; //浏览器窗口发生变化时同时变化DIV高度
 
 </script>
 </html>
