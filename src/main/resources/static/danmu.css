@@ -4,7 +4,7 @@
     bottom: 0;
     z-index: 9999;
     overflow: auto;
-    height: 147px; /*弹幕区高度*/
+    height: 180px; /*弹幕区高度*/
     padding: 0;
     margin: 0;
     width: 35%
