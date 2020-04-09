@@ -34,14 +34,14 @@
 
         .word{
             width: 100%;
-            height: 15%;
+            height: 17%;
             display: flex;
             justify-content: center; /* 水平居中 */
             align-items: center;
         }
         .word span{
             color: white;
-            font-size: 10vh;
+            font-size: 12vh;
             font-family: 华文楷体;
             font-weight: 900;
             text-shadow: 0 0 2px black;
@@ -50,7 +50,7 @@
             width: 10%;
         }
         .fade-enter-active, .fade-leave-active {
-            transition: opacity .5s;
+            transition: opacity 1s;
         }
         .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
             opacity: 0;
@@ -60,84 +60,86 @@
 <body>
 <div id="app" style="width: 100%;height: 100vh;  overflow: hidden;">
     <div style="position: absolute;width: 100%;height: 100%">
-    <div style="width:100%;height:25%">
-        <div style="width: 20%;height:100%;float: left">
-           <img id="1" src="./img/20203912532397VCG211183156413 (3)_1.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="2" src="./img/20203912532397VCG211183156413 (3)_2.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="3" src="./img/20203912532397VCG211183156413 (3)_3.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="4" src="./img/20203912532397VCG211183156413 (3)_4.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="5" src="./img/20203912532397VCG211183156413 (3)_5.jpg" class="fillImage" @click="openImg($event)">
-        </div>
+        <div style="width:100%;height:25%">
+            <div style="width: 20%;height:100%;float: left">
+                <img id="1" src="./img/20203912532397VCG211183156413 (3)_1.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="2" src="./img/20203912532397VCG211183156413 (3)_2.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="3" src="./img/20203912532397VCG211183156413 (3)_3.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="4" src="./img/20203912532397VCG211183156413 (3)_4.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="5" src="./img/20203912532397VCG211183156413 (3)_5.jpg" class="fillImage" @click="openImg($event)">
+            </div>
 
 
-    </div>
-    <div style="width:100%;height:25%">
-        <div style="width: 20%;height:100%;float: left">
-            <img id="6" src="./img/20203912532397VCG211183156413 (3)_6.jpg" class="fillImage" @click="openImg($event)">
         </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="7" src="./img/20203912532397VCG211183156413 (3)_7.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="8" src="./img/20203912532397VCG211183156413 (3)_8.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="9"  src="./img/20203912532397VCG211183156413 (3)_9.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="10" src="./img/20203912532397VCG211183156413 (3)_10.jpg" class="fillImage" @click="openImg($event)">
-        </div>
+        <div style="width:100%;height:25%">
+            <div style="width: 20%;height:100%;float: left">
+                <img id="6" src="./img/20203912532397VCG211183156413 (3)_6.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="7" src="./img/20203912532397VCG211183156413 (3)_7.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="8" src="./img/20203912532397VCG211183156413 (3)_8.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="9"  src="./img/20203912532397VCG211183156413 (3)_9.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="10" src="./img/20203912532397VCG211183156413 (3)_10.jpg" class="fillImage" @click="openImg($event)">
+            </div>
 
-    </div>
-    <div style="width:100%;height:25%">
-        <div style="width: 20%;height:100%;float: left">
-            <img id="11"  src="./img/20203912532397VCG211183156413 (3)_11.jpg" class="fillImage"  @click="openImg($event)">
         </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="12"  src="./img/20203912532397VCG211183156413 (3)_12.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="13" src="./img/20203912532397VCG211183156413 (3)_13.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="14"  src="./img/20203912532397VCG211183156413 (3)_14.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="15"  src="./img/20203912532397VCG211183156413 (3)_15.jpg" class="fillImage" @click="openImg($event)">
-        </div>
+        <div style="width:100%;height:25%">
+            <div style="width: 20%;height:100%;float: left">
+                <img id="11"  src="./img/20203912532397VCG211183156413 (3)_11.jpg" class="fillImage"  @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="12"  src="./img/20203912532397VCG211183156413 (3)_12.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="13" src="./img/20203912532397VCG211183156413 (3)_13.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="14"  src="./img/20203912532397VCG211183156413 (3)_14.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="15"  src="./img/20203912532397VCG211183156413 (3)_15.jpg" class="fillImage" @click="openImg($event)">
+            </div>
 
+        </div>
+        <div style="width:100%;height:25%">
+            <div style="width: 20%;height:100%;float: left">
+                <img id="16"  src="./img/20203912532397VCG211183156413 (3)_16.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="17"  src="./img/20203912532397VCG211183156413 (3)_17.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="18"  src="./img/20203912532397VCG211183156413 (3)_18.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="19"  src="./img/20203912532397VCG211183156413 (3)_19.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+            <div style="width: 20%;height:100%;float: left">
+                <img id="20"  src="./img/20203912532397VCG211183156413 (3)_20.jpg" class="fillImage" @click="openImg($event)">
+            </div>
+        </div>
     </div>
-    <div style="width:100%;height:25%">
-        <div style="width: 20%;height:100%;float: left">
-            <img id="16"  src="./img/20203912532397VCG211183156413 (3)_16.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="17"  src="./img/20203912532397VCG211183156413 (3)_17.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="18"  src="./img/20203912532397VCG211183156413 (3)_18.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="19"  src="./img/20203912532397VCG211183156413 (3)_19.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-        <div style="width: 20%;height:100%;float: left">
-            <img id="20"  src="./img/20203912532397VCG211183156413 (3)_20.jpg" class="fillImage" @click="openImg($event)">
-        </div>
-    </div>
-    </div>
-    <div style="position: absolute;width: 100%;height: 100%">
+    <div v-if="word1Flag" style="position: absolute;width: 100%;height: 100%">
         <div style=" margin-top: 7%"  class="word">
             <transition name="fade">
-                <img v-if="word1Flag"style="margin-right: 7%;"src="./img/Bit.png">
-                <img v-if="word1Flag" style="margin-left: 5%;"src="./img/hua.png">
+            <img v-if="word1Flag" style="margin-right: 7%;"src="./img/Bit.png">
+            </transition>
+            <transition name="fade">
+            <img v-if="word1Flag" style="margin-right: 7%;"src="./img/hua.png">
             </transition>
         </div>
         <div class="word">
@@ -157,7 +159,17 @@
         </div>
 
     </div>
-
+    <el-dialog
+            title="一起点亮武汉吧！"
+            :visible.sync="dialog.visible"
+            width="30%"
+            center>
+        <span>需要注意的是内容是默认不居中的</span>
+        <span slot="footer" class="dialog-footer">
+    <el-button @click="centerDialogVisible = false">取 消</el-button>
+    <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
+  </span>
+    </el-dialog>
 </div>
 </body>
 
@@ -192,10 +204,18 @@
                 lightCount++;
             }
         })
+        setTimeout(function () {
+            if(lightCount === 20){
+                app.word1Flag =true;
+                setTimeout(function () {
+                    app.word2Flag =true;
+                },1000);
+                setTimeout(function () {
+                    app.word3Flag =true;
+                },2000);
+            }
+        },5000)
 
-        if(lightCount === 25){
-
-        }
     }
 
     //连接关闭的回调方法
@@ -240,19 +260,22 @@
         el: '#app',
         data:{
             fill:'cover',
-            imgFlag:false,
             word1Flag:false,
             word2Flag:false,
-            word3Flag:false
+            word3Flag:false,
+            dialog:{
+                visible:false,
+            }
+
         },
         methods:{
             openImg:function (event) {
                 console.log(event.target);
-                imgLight(event.target.id);
+                this.dialog.visible=true;
             }
         },
         mounted: function () {
-            //autodivheight();
+
         }
     })
 
