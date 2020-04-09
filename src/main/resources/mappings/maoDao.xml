@@ -12,20 +12,19 @@
     </resultMap>
 
     <select id="getMapStatus" resultMap="mapBean">
-        select
-      `name`,`comment`,`line`,`col`,`status`,`index`,`school`
-      from map_all
-      order by `index` ASC
+        select `name`,`comment`,`line`,`col`,`status`,`index`,`school`
+        from map_all
+        order by `index` ASC
     </select>
 
     <update id="updateStatus">
         update map_all
-        set `name`=#{name},`comment`=#{comment},status=#{status}
-        where `line`=#{line} and `col`=#{col} and `index`=#{index}
+        set `name`=#{name},`comment`=#{comment},status=#{status},school=#{school}
+        where `index`=#{index}
     </update>
 
     <update id="reset">
         update map_all
-        set `name` = "",`comment`="",`status`=0
+        set `name` = "",`comment`="",`status`=0,school=""
     </update>
 </mapper>

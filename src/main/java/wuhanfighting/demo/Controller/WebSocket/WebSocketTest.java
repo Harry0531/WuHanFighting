@@ -83,6 +83,7 @@ public class WebSocketTest {
         now.setCol((Integer) nowJson.get("col"));
         now.setIndex((Integer) nowJson.get("index"));
         now.setStatus((Integer) nowJson.get("status"));
+        now.setSchool((String) nowJson.get("school"));
 
         mapService.updateStatus(now);
         System.out.println(now.getName()+"点亮了第"+now.getLine()+"行第"+now.getCol()+"列的图片\n"+now.getComment());
