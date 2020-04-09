@@ -136,23 +136,23 @@
     <div style="position: absolute;width: 100%;height: 100%">
         <div style=" margin-top: 7%"  class="word">
             <transition name="fade">
-                <img style="margin-right: 7%;"src="./img/Bit.png">
-                <img style="margin-left: 5%;"src="./img/hua.png">
+                <img v-if="word1Flag"style="margin-right: 7%;"src="./img/Bit.png">
+                <img v-if="word1Flag" style="margin-left: 5%;"src="./img/hua.png">
             </transition>
         </div>
         <div class="word">
             <transition name="fade">
-                <span>北理工，华师一！</span>
+                <span v-if="word1Flag">北理工，华师一！</span>
             </transition>
         </div>
         <div class="word">
             <transition name="fade">
-                <span>携手抗疫，并肩同行！</span>
+                <span v-if="word2Flag">携手抗疫，并肩同行！</span>
             </transition>
         </div>
         <div class="word">
             <transition name="fade">
-                <span>武汉加油！中国加油！</span>
+                <span v-if="word3Flag">武汉加油！中国加油！</span>
             </transition>
         </div>
 
@@ -185,11 +185,17 @@
     websocket.onmessage = function (event) {
         console.log("收到消息");
         var data = JSON.parse(event.data);
+        var lightCount=0;
         data.forEach(function (img) {
             if(img["status"] === 1){//被点亮的图片
                 imgLight(img["index"]);
+                lightCount++;
             }
         })
+
+        if(lightCount === 25){
+
+        }
     }
 
     //连接关闭的回调方法
@@ -233,8 +239,11 @@
     var app = new Vue({
         el: '#app',
         data:{
-            fill:'cover'
-
+            fill:'cover',
+            imgFlag:false,
+            word1Flag:false,
+            word2Flag:false,
+            word3Flag:false
         },
         methods:{
             openImg:function (event) {
