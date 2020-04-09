@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        #box{
+            background-color:gray;
+            height:20px;
+            overflow:hidden;
+        }
+        .a{
+            background-color:red;
+            width:0;
+            height:20px;
+            margin: 0 auto;
+            transition:width .8s;
+            -webkit-transition:width .8s;
+        }
+        #box:hover .a{
+            width:100%;
+            transition:width .8s;
+            -webkit-transition:width .8s;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="a"></div>
+</div>
+</body>
+</html>
