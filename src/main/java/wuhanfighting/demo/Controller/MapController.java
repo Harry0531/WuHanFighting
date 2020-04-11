@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import wuhanfighting.demo.Controller.WebSocket.WebSocketTest;
 
+import java.io.IOException;
+
 @Controller
 @RequestMapping("test")
 public class MapController {
@@ -24,7 +26,11 @@ public class MapController {
     @ResponseBody
     @RequestMapping(value = "/reset",method = RequestMethod.GET)
     public Object reset(){
-        mapService.reset();
+        try {
+            mapService.reset();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return "Success";
     }
 }
