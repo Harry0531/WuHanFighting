@@ -45,7 +45,7 @@ public class MapService {
             }
             try {
                 webSocketTest.lightAllTest();
-                Thread.sleep(500);
+                    Thread.sleep(1000);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
@@ -66,7 +66,7 @@ public class MapService {
            entities.add(new MapEntity("任翔渝", "同舟共济武汉加油!丹巴加油!中国加油!共抗疫情!", "北京理工大学", 1, 1, 1, 1, new Date()));
            entities.add(new MapEntity("张航", "为武汉人民加油，让我们齐心协力，战胜疫情!", "北京理工大学", 1, 1, 1, 1, new Date()));
 
-           entities.add(new MapEntity("谢贞祥", "武汉今天也是有阳光作伴的一天，我们不孤单，要乐观!", "华中师范大学第一附属中学", 1, 1, 1, 1, new Date()));
+           entities.add(new MapEntity("朱长昊", "武汉今天也是有阳光作伴的一天，我们不孤单，要乐观!", "北京理工大学", 1, 1, 1, 1, new Date()));
            entities.add(new MapEntity("熊慧志", "千言万语汇成一句：中国加油，湖北加油，武汉加油。", "华中师范大学第一附属中学", 1, 1, 1, 1, new Date()));
            entities.add(new MapEntity("刘娟", "聚沙成塔，众志成城，佑我中华，武汉加油!", "华中师范大学第一附属中学", 1, 1, 1, 1, new Date()));
            entities.add(new MapEntity("屈哲", "抗击新冠肺炎病毒，胜利终将属于我们!", "华中师范大学第一附属中学", 1, 1, 1, 1, new Date()));
